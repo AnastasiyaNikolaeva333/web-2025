@@ -1,0 +1,111 @@
+* {
+    font-family: 'Golos UI';
+}
+
+.main-button {
+    top: 0;
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: start;
+    left: 0;
+    margin-top: 0;
+    border-right: 1px solid #2222220D;
+}
+
+.home {
+    width: 42px;
+    height: 42px;
+}
+
+.user {
+    width: 33px;
+    height: 33px;
+    margin-left: 5px;
+}
+
+.plus {
+    width: 33px;
+    height: 33px;
+    margin-left: 5px;
+    padding-bottom: 10px;
+}
+
+.profile__avatarka {
+    width: 123px;
+    height: 123px;
+    border-radius: 16px;
+    margin: 0;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-top: 93px;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.profole__count-post
+{
+    width: 101px;
+    height: 30px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.profole__count {
+    border-radius: 6px;
+    background: #F2F3F5;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
+.profole__count__image {
+    height: 16px;
+    width: 16px;
+    vertical-align: middle;
+}
+
+.profole__count__text {
+    display: inline;
+    font-size: 15px;
+    vertical-align: middle;
+    color: #222222;
+}
+
+.profile__fotos {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    width: 976px;
+    gap: 2.48px;
+}
+
+.profile__name {
+    font-size: 32px;
+    color: #222222;
+    margin: 0;
+}
+
+.profile__bio {
+    width: 361px;
+    text-align: center;
+    margin: 0;
+}
+
+.profile__bio__text {
+    text-align: center;
+    font-size: 15px;
+    color: #222222;
+}
+
+.profile_foto {
+    width: 322.35px;
+    height: 322.35px;
+    border-radius: 2px;
+}
