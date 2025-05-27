@@ -1,0 +1,66 @@
+<?php
+$usersJson = file_get_contents('users.json');
+$photosJson = file_get_contents('profile_post.json');
+if ($usersJson == false || $photosJson == false) {
+    die('Ошибка: Не удалось прочитать файлы с данными.');
+}
+$users = json_decode($usersJson, true);
+$photos = json_decode($photosJson, true);
+if ($users == null || $photos == null) {
+    die('Ошибка: Неверный формат файлов.');
+}
+$userId = $_GET['id'] ?? 1;
+if ($userId == null || !is_numeric($userId) || (int)$userId <= 0 ) {
+    header("Location: task__3.php");
+    exit;
+}
+$userId = (int)$userId;
+$user = getUserById($userId, $users);
+if ($user == null) {
+    header("Location: 2task.php");
+    exit;
+}
+$userPhotos = array_filter($photos, function ($photo) use ($userId) {
+    return $photo['user_id'] == $userId;
+});
+
+function getUserById($userId, $users) {
+    foreach ($users as $user) {
+        if ($user['id'] == $userId) {
+            return $user;
+        }
+    }
+    return null;
+}
+if ($user == null) {
+    die('Ошибка: Пользователь не найден.');
+}
+$userPhotos = [];
+foreach ($photos as $photo) {
+    if ($photo['user_id'] == $userId) {
+        $userPhotos[] = $photo;
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница пользователя</title>
+    <link href="styles/style__profile.css" rel="stylesheet">
+    <link href="styles/fonts.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-button">
+        <img src="images/home.png" alt="Домик" class="home">
+        <img src="images/user.png" alt="Пользователь" class="user">
+        <img src="images/plus.png" alt="Плюс" class="plus">
+    </div>
+    <?php if ($user): ?>
+        <?php require 'profilee.php'; ?>
+    <?php else: ?>
+        <p>Ошибка: Пользователь не найден.</p>
+    <?php endif; ?>
+</body>
+</html>
