@@ -1,0 +1,122 @@
+* {
+    font-family: 'Golos UI';
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 62px;
+}
+
+.main-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 140px;
+    color: #222222;
+    margin-top: 0;
+    margin-bottom: 0px;
+    z-index: 1;
+}
+
+.image {
+    width: 462px;
+    height: 501px;
+    margin-top: -73.37px;
+    margin-left: 90px;
+}
+
+.form {
+    width: 343px;
+    font-size: 15px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.from__one {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.form__two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.form__label {
+    color: #222222;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: -0.15px;
+    width: 343px;
+}
+
+.form__input {
+    font-size: 15px;
+    width: -webkit-fill-available;
+    border-radius: 10px;
+    padding-top: 13px;
+    padding-right: 12px;
+    padding-bottom: 13px;
+    padding-left: 12px;
+    background: #F2F3F5;
+    border: 1px solid #f2f3f5;
+}
+
+.form__one__input-info{
+    color: #808080;
+}
+
+.form__two__input {
+    width: 343px;
+    position: relative;
+}
+
+.form__two__image {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 92%;
+    padding-top: 13px;
+}
+
+.form__input-info {
+    width: 343px;
+    letter-spacing: -0.08px;
+    color: #808080;
+}
+
+.form__button {
+    width: 343px;
+    height: 48px;
+    border-radius: 10px;
+    background: #222222;
+    color: white;
+    font-size: 16px;
+    line-height: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.hidden {
+    display: none;
+}
+
+.form__input.error {
+    border-color: red;
+    background-color: #ffe6e6;
+}
+
+#error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#error-message.show {
+    display: block;
+}
