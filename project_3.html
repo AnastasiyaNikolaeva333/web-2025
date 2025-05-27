@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Страница входа</title>
+    <link href="styles/style__login.css" type="text/css" rel="stylesheet">
+    <link href="styles/fonts.css" type="text/css" rel="stylesheet">
+    <script src="project_3.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <h1 class="main-header">Войти</h1>
+        <img src="images/manwithbag.jpg" alt="Человек" class="image">
+    </div>
+    <form id="loginForm">
+        <div class="form">
+            <p id="error-message" class="hidden">Неверный email или пароль</p>
+            <div class="from__one">
+                <label class="form__label" for="email-input">Электронная почта</label>
+                <input class="form__input" type="email" id="email-input" name="email">
+                <span class="form__one__input-info">Введите электропочту в формате *****@***.***</span>
+            </div>
+            <div class="form__two">
+                <label class="form__label" for="password-input">Пароль</label>
+                <div class="form__two__input">
+                    <img src="images/stealthily.png" alt="Показать пароль" class="form__two__image">
+                    <input class="form__input" type="password" id="password-input" name="password">
+                </div>
+            </div>
+            <input class="form__button" type="submit" name="next" value="Продолжить">
+        </div>
+    </form>
+</body>
+</html>
