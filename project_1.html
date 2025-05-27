@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Новостная лента</title>
+    <link href="styles/style__home.css" rel="stylesheet">
+    <link href="styles/fonts.css" type="text/css" rel="stylesheet">
+    <script src="slider.js" defer></script>
+    <script src="modalWindow.js" defer></script>
+    <script src="hiddenText.js" defer></script>
+</head>
+<body>
+    <div class="main-button">
+        <img src="images/home.png" alt="Домик" class="main-button__home">
+        <img src="images/user.png" alt="Пользователь" class="main-button__icon">
+        <img src="images/plus.png" alt="Плюс" class="main-button__icon">
+    </div>
+    <div class="post">
+        <div class="post__user">
+            <div class="post__user-info">
+                <img class="post__avatar" src="images/avatarka1.jpg" alt="Аватарка Вани Денисова">
+                <h2 class="post__author">Ваня Денисов</h2>
+            </div>
+            <img src="images/pen.png" alt="Ручка" class="post__edit-icon">
+        </div>
+        <div class="post__slider slider">
+            <div class="slider__counter">1/3</div>
+            <div class="slider__images">
+                <img src="images/street.jpg" alt="Фото Вани Денисова" class="slider__image"
+                     data-modal-group="post1" data-index="0">
+                <img src="images/fotoStreet.jpg" alt="Фото Вани Денисова" class="slider__image"
+                     data-modal-group="post1" data-index="1">
+                <img src="images/eat.jpg" alt="Фото Вани Денисова" class="slider__image"
+                     data-modal-group="post1" data-index="2">
+            </div>
+            <button class="slider__arrow slider__arrow_prev">
+                <img src="images/slider-button.png" alt="Стрелка">
+            </button>
+            <button class="slider__arrow slider__arrow_next">
+                <img src="images/slider-button.png" alt="Стрелка">
+            </button>
+        </div>
+        <button class="post__likes">
+            <img src="images/like.png" alt="Лайк" class="post__like-icon">
+            <p class="post__likes-count">203</p>
+        </button>
+        <div class="post__text-container">
+            <p class="post__text" data-full="
+            Так красиво сегодня на улице! Настоящая зима))
+            Вспоминается Бродский: «Поздно ночью, в уснувшей долине, на самом дне, в городке, 
+            занесенном снегом по ручку двери...» ">
+            Так красиво сегодня на улице! Настоящая зима))
+            Вспоминается Бродский: «Поздно ночью,в уснувшей долине, на самом дне,в городке, 
+            занесенном...</p>
+            <button class="post__toggle-button">ещё</button>
+        </div>
+        <p class="post__time">
+            2 часа назад
+        </p>
+    </div>
+    <div class="post">
+        <div class="post__user">
+            <div class="post__user-info">
+                <img class="post__avatar" src="images/avatarka2.jpg" alt="Аватарка Лизы Дёминой">
+                <h2 class="post__author">Лиза Дёмина</h2>
+            </div>
+            <img src="images/pen.png" alt="Ручка" class="post__edit-icon">
+        </div>
+        <img src="images/onTable.jpg" alt="Фото Лизы Дёминой"
+             class="post__image"
+             data-modal-group="post2" data-index="0">
+        <button class="post__likes">
+            <img src="images/like.png" alt="Лайк" class="post__like-icon">
+            <p class="post__likes-count">234</p>
+        </button>
+        <p class="post__time">
+            1 день назад
+        </p>
+    </div>
+    <div class="modal" id="imageModal">
+        <div class="modal__content">
+            <button class="modal__close" id="modalCloseButton">&times;</button>
+            <img src="" alt="Изображение" class="modal__image" id="modalImage">
+            <button class="modal__arrow modal__arrow_prev" id="modalPrevButton">
+                <img src="images/slider-button.png" alt="Стрелка">
+            </button>
+            <button class="modal__arrow modal__arrow_next" id="modalNextButton">
+                <img src="images/slider-button.png" alt="Стрелка">
+            </button>
+            <div class="modal__counter" id="modalCounter">1 из 3</div>
+        </div>
+    </div>
+</body>
+</html>
